@@ -2,22 +2,45 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav"
-    app:startDestination="@id/cartFragment">
+    android:id="@+id/nav">
 
-    <fragment
-        android:id="@+id/cartFragment"
-        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.CartFragment"
-        android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/homeFragment"
         android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sliderFragment"
+            app:destination="@id/sliderFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_yogurtFragment"
+            app:destination="@id/yogurtFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/moreFragment"
-        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.MoreFragment"
-        android:label="fragment_more"
-        tools:layout="@layout/fragment_more" />
+        android:id="@+id/addYogurtFragment"
+        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.AddYogurtFragment"
+        android:label="fragment_add_yogurt"
+        tools:layout="@layout/fragment_add_yogurt" />
+    <fragment
+        android:id="@+id/sliderFragment"
+        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.SliderFragment"
+        android:label="fragment_slider"
+        tools:layout="@layout/fragment_slider" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/yogurtFragment"
+        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.yogurtFragment"
+        android:label="fragment_yogurt"
+        tools:layout="@layout/fragment_yogurt" >
+        <action
+            android:id="@+id/action_yogurtFragment_to_addYogurtFragment"
+            app:destination="@id/addYogurtFragment" />
+    </fragment>
 </navigation>

@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:id="@+id/homeFragment2"
+        android:title="Inicio"
+        android:icon="@drawable/casa"/>
+    <item android:id="@+id/personalisaYogurtFragment"
+        android:title="Personaliza tu yogurt"
+        android:icon="@drawable/cosecha"/>
+    <item android:id="@+id/cartFragment2"
+        android:title="Cart"
+        android:icon="@drawable/carrito"/>
+    <item android:id="@+id/moreFragment"
+        android:title="Perfil"
+        android:icon="@drawable/usuario"/>
 </menu>
