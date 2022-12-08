@@ -17,12 +17,12 @@ class CategoryAdapter(var contex: Context,val list: ArrayList<CategoryModel>): R
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
-        return CategoryViewHolder(LayoutInflater.from(contex).inflate(R.layout.item_category_layout,parent,false))
+        return CategoryViewHolder(LayoutInflater.from(contex).inflate(R.layout.item_category_layout,parent,true))
     }
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
-        holder.binding.textView2.text = list[position].cat
-       Glide.with(contex).load(list[position].img).into(holder.binding.imageView2)
+    holder.binding.textView2.text = list[position].cat
+    Glide.with(contex).load(list[position].img).into(holder.binding.imageView2)
     }
 
     override fun getItemCount(): Int {
