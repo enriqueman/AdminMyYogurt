@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-//import com.bumptech.glide.Glide
+import com.bumptech.glide.Glide
+
 import edu.unicauca.aplimovil.adminmyyogurt.R
 import edu.unicauca.aplimovil.adminmyyogurt.databinding.ItemCategoryLayoutBinding
 import edu.unicauca.aplimovil.adminmyyogurt.model.CategoryModel
@@ -21,7 +22,7 @@ class CategoryAdapter(var contex: Context,val list: ArrayList<CategoryModel>): R
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         holder.binding.textView2.text = list[position].cat
-        //Glide.with(contex).load(list[position].img).into(holder.binding.imageView2)
+       Glide.with(contex).load(list[position].img).into(holder.binding.imageView2)
     }
 
     override fun getItemCount(): Int {

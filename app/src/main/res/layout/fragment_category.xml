@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/preview"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,6 +46,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecycler"
         android:layout_width="match_parent"
+        tools:listitem="@layout/item_category_layout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
