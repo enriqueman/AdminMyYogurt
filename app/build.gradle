@@ -57,7 +57,7 @@ dependencies {
     //autenticacion
     implementation("com.google.firebase:firebase-auth-ktx")
     // fire store
-    implementation("\tcom.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
     //cloud store
     implementation("com.google.firebase:firebase-storage-ktx")
 

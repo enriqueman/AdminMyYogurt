@@ -2,23 +2,9 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav">
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment3">
 
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_sliderFragment"
-            app:destination="@id/sliderFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_yogurtFragment"
-            app:destination="@id/yogurtFragment" />
-    </fragment>
     <fragment
         android:id="@+id/addYogurtFragment"
         android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.AddYogurtFragment"
@@ -42,5 +28,20 @@
         <action
             android:id="@+id/action_yogurtFragment_to_addYogurtFragment"
             app:destination="@id/addYogurtFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment3_to_sliderFragment"
+            app:destination="@id/sliderFragment" />
+        <action
+            android:id="@+id/action_homeFragment3_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment3_to_yogurtFragment"
+            app:destination="@id/yogurtFragment" />
     </fragment>
 </navigation>
