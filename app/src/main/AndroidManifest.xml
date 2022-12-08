@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AdminMyYogurt"
         tools:targetApi="31">
         <activity
-            android:name=".AllOrderActivity"
+            android:name=".activity.AllOrderActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
