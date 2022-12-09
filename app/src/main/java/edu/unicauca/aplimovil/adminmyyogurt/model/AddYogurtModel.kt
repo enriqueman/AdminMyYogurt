@@ -1,8 +1,6 @@
 package edu.unicauca.aplimovil.adminmyyogurt.model
 
-import android.media.Image
-
-data class YogurtModel (
+data class AddYogurtModel(
     val yogurtid: String? = "",
     val nombre: String? = "",
     val descripcion: String? = "",
@@ -15,12 +13,4 @@ data class YogurtModel (
     val CoverImg: String? = "",
     val categoria: String? = "",
     val yogurtImages: ArrayList<String>
-
-
-
 )
-
-
-
-
-
