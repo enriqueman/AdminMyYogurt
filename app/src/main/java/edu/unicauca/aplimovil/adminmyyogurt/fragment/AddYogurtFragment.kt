@@ -96,7 +96,7 @@ class AddYogurtFragment : Fragment() {
             binding.yogurtNameEdt.requestFocus()
             binding.yogurtNameEdt.error="Empty"
 
-        }//else (binding.yo)
+        }//gielse (binding.yo)
     }
 
     private fun setYogurtCategory(){
