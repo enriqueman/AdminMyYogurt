@@ -1,16 +1,17 @@
 package edu.unicauca.aplimovil.adminmyyogurt.model
 
 data class AddYogurtModel(
-    val yogurtid: String? = "",
-    val nombre: String? = "",
-    val descripcion: String? = "",
-    val presentacion: String? = "",
-    val precio: String? = "",
-    val ph: String? = "",
-    val espesor: String? = "",
-    val azucar: String? = "",
-    val fruta: String? = "",
+    val yogurtName: String? = "",
+    val yogurtDescripcion: String? = "",
     val CoverImg: String? = "",
-    val categoria: String? = "",
+    val yogurtCategoria: String? = "",
+    val yogurtId: String? = "",
+    val yogurtPresentacion: String? = "",
+    val yogurtPrecio: String? = "",
+    val yogurtPh: String? = "",
+    val yogurtEspesor: String? = "",
+    val yogurtAzucar: String? = "",
+    val yogurtFruta: String? = "",
     val yogurtImages: ArrayList<String>
+
 )
