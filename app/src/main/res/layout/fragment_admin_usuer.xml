@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.adminUsuerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:gravity="center_horizontal"
+        android:text="Administracion de usuarios"
+        android:textColor="#ffff"
+        android:textSize="30sp"
+        android:background="@drawable/gradient_background"/>
+
+    <Button
+        android:id="@+id/btn_add_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Añadir usuario" />
+
+
+    <Button
+        android:id="@+id/btn_delete_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar usuario"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_update_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar usuario"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_list_users"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="10dp"
+        android:text="Listar usuarios" />
+
+
+</LinearLayout>

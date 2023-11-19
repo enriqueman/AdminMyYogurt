@@ -1,6 +1,7 @@
 package edu.unicauca.aplimovil.adminmyyogurt.model
 
-data class AddYogurtModel(
+
+data class NewsModel(
     val newsId: String? = "",
     val newsTitle: String? = "",
     val newsBody: String? = "",
@@ -13,7 +14,4 @@ data class AddYogurtModel(
     //val yogurtAzucar: String? = "",
     //val yogurtFruta: String? = "",
     val yogurtImages: ArrayList<String>
-
 )
-
-

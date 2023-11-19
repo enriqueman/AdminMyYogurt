@@ -124,7 +124,6 @@ class CategoryFragment : Fragment() {
                 dialog.dismiss()
                 Toast.makeText(requireContext(), "Something went wrong", Toast.LENGTH_SHORT).show()
             }
-
     }
 
 }

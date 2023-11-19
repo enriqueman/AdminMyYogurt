@@ -97,43 +97,39 @@ class AddYogurtFragment : Fragment() {
     }
 
     private fun validateData() {
-        if (binding.yogurtNameEdt.text.toString().isEmpty()){
-            binding.yogurtNameEdt.requestFocus()
-            binding.yogurtNameEdt.error="Empty"
+        if (binding.newsTitleEdt.text.toString().isEmpty()){
+            binding.newsTitleEdt.requestFocus()
+            binding.newsTitleEdt.error="Empty"
 
         }// comentario para que lo suba kather
-        else if(binding.yogurtDescripcionEdt.text.toString().isEmpty()){
-            binding.yogurtDescripcionEdt.requestFocus()
-            binding.yogurtDescripcionEdt.error="Empty"
+        else if(binding.newsBodyEdt.text.toString().isEmpty()){
+            binding.newsBodyEdt.requestFocus()
+            binding.newsBodyEdt.error="Empty"
         }
-        else if (binding.yogurtPresentacionEdt.text.toString().isEmpty()){
-            binding.yogurtPresentacionEdt.requestFocus()
-            binding.yogurtPresentacionEdt.error="Empty"
+        else if (binding.newsVeraEdt.text.toString().isEmpty()){
+            binding.newsVeraEdt.requestFocus()
+            binding.newsVeraEdt.error="Empty"
         }
-        else if(binding.yogurtPresentacionEdt.text.toString().isEmpty()){
-            binding.yogurtPresentacionEdt.requestFocus()
-            binding.yogurtPresentacionEdt.error="Empty"
+        else if(binding.newsDateEdt.text.toString().isEmpty()){
+            binding.newsDateEdt.requestFocus()
+            binding.newsDateEdt.error="Empty"
         }
-        else if(binding.yogurtPrecioEdt.text.toString().isEmpty()){
-            binding.yogurtPrecioEdt.requestFocus()
-            binding.yogurtPrecioEdt.error="Empty"
+        else if(binding.newsLinkEdt.text.toString().isEmpty()){
+            binding.newsLinkEdt.requestFocus()
+            binding.newsLinkEdt.error="Empty"
         }
-        else if(binding.yogurtPhEdt.text.toString().isEmpty()){
-            binding.yogurtPhEdt.requestFocus()
-            binding.yogurtPhEdt.error="Empty"
+        else if(binding.newsAutorEdt.text.toString().isEmpty()){
+            binding.newsAutorEdt.requestFocus()
+            binding.newsAutorEdt.error="Empty"
         }
-        else if(binding.yogurtEspesorEdt.text.toString().isEmpty()){
-            binding.yogurtEspesorEdt.requestFocus()
-            binding.yogurtEspesorEdt.error="Empty"
-        }
-        else if(binding.yogurtAzucarEdt.text.toString().isEmpty()){
+       /* else if(binding.yogurtAzucarEdt.text.toString().isEmpty()){
             binding.yogurtAzucarEdt.requestFocus()
             binding.yogurtAzucarEdt.error="Empty"
         }
         else if(binding.yogurtFrutaEdt.text.toString().isEmpty()){
             binding.yogurtFrutaEdt.requestFocus()
             binding.yogurtFrutaEdt.error="Empty"
-        }
+        }*/
         else if (coverImage==null){
             Toast.makeText(requireContext(), "Please select cover image", Toast.LENGTH_SHORT).show()
         }
@@ -153,7 +149,7 @@ class AddYogurtFragment : Fragment() {
 
         val fileName = UUID.randomUUID().toString()+".jpg"
 
-        val refStorage = FirebaseStorage.getInstance().reference.child("yogures/$fileName")
+        val refStorage = FirebaseStorage.getInstance().reference.child("noticias/$fileName")
         refStorage.putFile(coverImage!!)
             .addOnSuccessListener {
                 it.storage.downloadUrl.addOnSuccessListener {
@@ -175,7 +171,7 @@ class AddYogurtFragment : Fragment() {
 
         val fileName = UUID.randomUUID().toString()+".jpg"
 
-        val refStorage = FirebaseStorage.getInstance().reference.child("yogures/$fileName")
+        val refStorage = FirebaseStorage.getInstance().reference.child("noticias/$fileName")
         refStorage.putFile(list[i])
             .addOnSuccessListener {
                 it.storage.downloadUrl.addOnSuccessListener {image->
@@ -198,22 +194,23 @@ class AddYogurtFragment : Fragment() {
     }
 
     private fun storeData() {
-        val db = Firebase.firestore.collection("yogures")
+        val db = Firebase.firestore.collection("noticias")
         val key= db.document().id
 
         val data =AddYogurtModel(
 
-            binding.yogurtNameEdt.text.toString(),
-            binding.yogurtDescripcionEdt.text.toString(),
+            key,
+            binding.newsTitleEdt.text.toString(),
+            binding.newsBodyEdt.text.toString(),
             coverImgUrl.toString(),
             categoryList[binding.yogurtCategoryDropdown.selectedItemPosition],
-            key,
-            binding.yogurtPresentacionEdt.text.toString(),
-            binding.yogurtPrecioEdt.text.toString(),
-            binding.yogurtPhEdt.text.toString(),
-            binding.yogurtEspesorEdt.text.toString(),
-            binding.yogurtAzucarEdt.text.toString(),
-            binding.yogurtFrutaEdt.text.toString(),
+
+            binding.newsVeraEdt.text.toString(),
+            binding.newsDateEdt.text.toString(),
+            binding.newsLinkEdt.text.toString(),
+            binding.newsAutorEdt.text.toString(),
+            //binding.yogurtAzucarEdt.text.toString(),
+            //binding.yogurtFrutaEdt.text.toString(),
             listImages
 
 
@@ -221,7 +218,7 @@ class AddYogurtFragment : Fragment() {
         db.document(key).set(data).addOnSuccessListener {
             dialog.dismiss()
             Toast.makeText(requireContext(), "Product Added", Toast.LENGTH_SHORT).show()
-            binding.yogurtNameEdt.text = null
+            binding.newsTitleEdt.text = null
 
         }
             .addOnFailureListener {

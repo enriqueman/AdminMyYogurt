@@ -31,7 +31,11 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment3_to_sliderFragment)
         }
         binding.button4.setOnClickListener {
-           startActivity(Intent(requireContext(),AllOrderActivity::class.java))
+            findNavController().navigate(R.id.action_homeFragment3_to_notificacionFragment)
+        }
+
+        binding.button5.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment3_to_adminUsuerFragment)
         }
         return binding.root
     }
