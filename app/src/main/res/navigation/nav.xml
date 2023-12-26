@@ -63,10 +63,17 @@
         <action
             android:id="@+id/action_adminUsuerFragment_to_userFragment"
             app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_adminUsuerFragment_to_userdeleteFragment"
+            app:destination="@id/userdeleteFragment" />
     </fragment>
     <fragment
         android:id="@+id/notificacionFragment"
         android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.NotificacionFragment"
         android:label="fragment_notificacion"
         tools:layout="@layout/fragment_notificacion" />
+    <fragment
+        android:id="@+id/userdeleteFragment"
+        android:name="edu.unicauca.aplimovil.adminmyyogurt.fragment.userdeleteFragment"
+        android:label="userdeleteFragment" />
 </navigation>

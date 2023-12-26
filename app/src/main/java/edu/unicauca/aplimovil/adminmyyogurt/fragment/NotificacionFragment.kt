@@ -50,12 +50,6 @@ class NotificacionFragment : Fragment() {
         setUserTelefono()
         sendmsm()
 
-
-
-
-
-
-
         return binding.root
     }
 
@@ -85,7 +79,7 @@ class NotificacionFragment : Fragment() {
                 print(data)
 
             }
-            newsList.add(index = 0, "Select noticia")
+            newsList.add(index = 0, "Seleccionar noticia")
 
             val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, newsList)
             binding.newsBodyDropdown.adapter = arrayAdapter
@@ -130,7 +124,6 @@ class NotificacionFragment : Fragment() {
                     nombre = doc["nombre"] as String?,
                     telefono = doc["telefono"].toString(),
                 )
-
                 //userList.add(data.userId.toString())
                 //   userList.add(data?.telefono?:"Telefono")
                 userList.add(data?.nombre ?: "nombre")
@@ -139,7 +132,7 @@ class NotificacionFragment : Fragment() {
             }
 
 
-            userList.add(index = 0, "Select user")
+            userList.add(index = 0, "Seleccionar Usuario")
 
             val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, userList)
             binding.userNameDropdown.adapter = arrayAdapter
@@ -161,18 +154,8 @@ class NotificacionFragment : Fragment() {
                                 val telefono = it.documents.first().get("telefono") as? String ?: ""
                                 binding.userNumberEditText.setText(telefono)
 
-
-
-
-
-
                             }
                         }
-
-
-
-
-
 
 
                     }

@@ -24,6 +24,9 @@ class adminUsuerFragment : Fragment() {
         binding.btnAddUser.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_adminUsuerFragment_to_userFragment)
         }
+        binding.btnDeleteUser.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_adminUsuerFragment_to_userdeleteFragment)
+        }
 
         return binding.root
     }
